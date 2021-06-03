@@ -1,8 +1,9 @@
-const answer = function({ inputText, setInputText}) {
+const answer = function({ currentElement, inputText, setInputText}) {
   
   const submitAnswerHandler = (e) => {
     e.preventDefault();
-    console.log(inputText);
+    console.log("Current question is: " + currentElement.name);
+    console.log("User answer is: " + inputText);
     setInputText('');
   }
   const inputTextHandler = (e) => {
