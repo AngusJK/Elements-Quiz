@@ -13,6 +13,7 @@ function App() {
     { atno: 5, name: 'boron', symbol: 'B'}
   ]
   const [currentQuestion, setCurrentQuestion] = useState('gee whiz');
+  const [inputText, setInputText] = useState("");
   return (
     <div className="container">
       <Header title="The Elements"/>
@@ -21,7 +22,10 @@ function App() {
         setCurrentQuestion={setCurrentQuestion}
         elements={elements}  
       />
-      <Answer />   
+      <Answer 
+        inputText={inputText}
+        setInputText={setInputText}
+      />   
       </div>
   );
 }
