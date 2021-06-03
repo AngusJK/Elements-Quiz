@@ -2,7 +2,8 @@
 
 const question = function({elements, currentQuestion, setCurrentQuestion}) {
   const setNewSymbol = (e) => {
-    setCurrentQuestion(elements[0].name);
+    let num = Math.floor(Math.random() * 5);
+    setCurrentQuestion(elements[num].symbol);
     console.log(currentQuestion);
   }
   return (
