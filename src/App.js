@@ -12,21 +12,22 @@ function App() {
     { atno: 4, name: 'beryllium', symbol: 'Be' }, 
     { atno: 5, name: 'boron', symbol: 'B'}
   ]
-  const [currentQuestion, setCurrentQuestion] = useState('gee whiz');
+  const [currentElement, setCurrentElement] = useState('');
   const [inputText, setInputText] = useState("");
   return (
     <div className="container">
       <Header title="The Elements"/>
       <Question 
-        currentQuestion={currentQuestion}
-        setCurrentQuestion={setCurrentQuestion}
+        currentElement={currentElement}
+        setCurrentElement={setCurrentElement}
         elements={elements}  
       />
       <Answer 
         inputText={inputText}
         setInputText={setInputText}
+        currentElement={currentElement}
       />   
-      </div>
+    </div>
   );
 }
 
