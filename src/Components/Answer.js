@@ -1,18 +1,17 @@
-const answer = function({ currentElement, inputText, setInputText}) {
-  
+const answer = function({ currentElement, inputText, setInputText, message, setMessage }) {
   const submitAnswerHandler = (e) => {
     e.preventDefault();
-    console.log("Current question is: " + currentElement.name);
-    console.log("User answer is: " + inputText);
+    setMessage("Correct!");
+    console.log(message);
     setInputText('');
   }
   const inputTextHandler = (e) => {
-    setInputText(e.target.value);
+    setInputText(e.target.value.trim().toLowerCase());
   }
   return(
-    <form action="" className="answer">
+    <form action="" className="answer" onSubmit={submitAnswerHandler}>
       <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
-      <button onClick={submitAnswerHandler} type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   )
 }
