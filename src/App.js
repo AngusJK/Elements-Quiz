@@ -3,17 +3,13 @@ import './App.css';
 import Header from './Components/Header';
 import Question from './Components/Question';
 import Answer from './Components/Answer';
+import Elements from './DATA';
 
 function App() {
-  const elements = [
-    { atno: 1, name: 'hydrogen', symbol: 'H' }, 
-    { atno: 2, name: 'helium', symbol: 'He' }, 
-    { anto: 3, name: 'lithium', symbol: 'Li'},
-    { atno: 4, name: 'beryllium', symbol: 'Be' }, 
-    { atno: 5, name: 'boron', symbol: 'B'}
-  ]
+  const elements = Elements;
   const [currentElement, setCurrentElement] = useState('');
   const [inputText, setInputText] = useState("");
+  const [message, setMessage] = useState("Peekaboo");
   return (
     <div className="container">
       <Header title="The Elements"/>
@@ -26,6 +22,8 @@ function App() {
         inputText={inputText}
         setInputText={setInputText}
         currentElement={currentElement}
+        message={message}
+        setMessage={setMessage}
       />   
     </div>
   );
