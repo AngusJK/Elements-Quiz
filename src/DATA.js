@@ -1,0 +1,25 @@
+const elements = [
+  { atno: 1, name: 'hydrogen', symbol: 'H' }, 
+  { atno: 2, name: 'helium', symbol: 'He' }, 
+  { anto: 3, name: 'lithium', symbol: 'Li'},
+  { atno: 4, name: 'beryllium', symbol: 'Be' }, 
+  { atno: 5, name: 'boron', symbol: 'B'},
+  { atno: 6, name: 'carbon', symbol: 'C'},
+  { atno: 7, name: 'nitrogen', symbol: 'N'},
+  { atno: 8, name: 'oxygen', symbol: 'O'},
+  { atno: 9, name: 'fluorine', symbol: 'F'},
+  { atno: 10, name: 'neon', symbol: 'Ne'},
+  { atno: 11, name: 'sodium', symbol: 'Na'},
+  { atno: 12, name: 'magnesium', symbol: 'Mg'},
+  { atno: 13, name: 'aluminum', symbol: 'Al'},
+  { atno: 14, name: 'silicon', symbol: 'Si'},
+  { atno: 15, name: 'phosphorus', symbol: 'P'},
+  { atno: 16, name: 'sulphur', symbol: 'S'},
+  { atno: 17, name: 'chlorine', symbol: 'Cl'},
+  { atno: 18, name: 'argon', symbol: 'Ar'},
+  { atno: 19, name: 'potassium', symbol: 'K'},
+  { atno: 20, name: 'calcium', symbol: 'Ca'},
+  { atno: 21, name: 'scandium', symbol: 'Sc'},
+]
+
+export default elements;
