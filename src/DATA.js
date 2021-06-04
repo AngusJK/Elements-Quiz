@@ -14,12 +14,21 @@ const elements = [
   { atno: 13, name: 'aluminum', symbol: 'Al'},
   { atno: 14, name: 'silicon', symbol: 'Si'},
   { atno: 15, name: 'phosphorus', symbol: 'P'},
-  { atno: 16, name: 'sulphur', symbol: 'S'},
+  { atno: 16, name: 'sulfur', symbol: 'S'},
   { atno: 17, name: 'chlorine', symbol: 'Cl'},
   { atno: 18, name: 'argon', symbol: 'Ar'},
   { atno: 19, name: 'potassium', symbol: 'K'},
   { atno: 20, name: 'calcium', symbol: 'Ca'},
   { atno: 21, name: 'scandium', symbol: 'Sc'},
+  { atno: 22, name: 'titanium', symbol: 'Ti'},
+  { atno: 23, name: 'vanadium', symbol: 'V'},
+  { atno: 24, name: 'chromium', symbol: 'Cr'},
+  { atno: 25, name: 'manganese', symbol: 'Mn'},
+  { atno: 26, name: 'iron', symbol: 'Fe'},
+  { atno: 27, name: 'cobalt', symbol: 'Co'},
+  { atno: 28, name: 'nickel', symbol: 'Ni'},
+  { atno: 29, name: 'copper', symbol: 'Cu'},
+  { atno: 30, name: 'zinc', symbol: 'Zn'}
 ]
 
 export default elements;
