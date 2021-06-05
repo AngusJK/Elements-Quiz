@@ -21,3 +21,13 @@
 .answer {
   margin-top: 20px;
 }
+
+.start-game {
+  background-color: green;
+  color: white;
+}
+
+.reset {
+  background-color: red;
+  color: white;
+}
