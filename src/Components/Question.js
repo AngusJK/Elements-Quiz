@@ -17,6 +17,9 @@ const question = function({
     console.log("User answer: " + inputText);
     console.log("Correct answer: " + currentElement.name);
     setQuestionsAsked(questionsAsked + 1);
+    if(currentElement.name === inputText) {
+      setCorrectAnswers(correctAnswers + 1);
+    }
     e.target.reset();
     setNewSymbol();
   }
@@ -33,7 +36,7 @@ const question = function({
       <form action="" className="answer" onSubmit={submitAnswerHandler}>
         <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
       </form>
-      <h3>{correctAnswers}/{questionsAsked}</h3>
+      <h3>Your score: {correctAnswers}/{questionsAsked}</h3>
     </div>
   )
 }
