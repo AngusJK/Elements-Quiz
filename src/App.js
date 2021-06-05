@@ -9,6 +9,8 @@ function App() {
   const elements = Elements;
   const [currentElement, setCurrentElement] = useState('');
   const [inputText, setInputText] = useState('');
+  const [questionsAsked, setQuestionsAsked] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
   return (
     <div className="container">
       <Header title="The Elements"/>
@@ -18,6 +20,10 @@ function App() {
         setCurrentElement={setCurrentElement}
         inputText={inputText}
         setInputText={setInputText}
+        questionsAsked={questionsAsked}
+        setQuestionsAsked={setQuestionsAsked}
+        correctAnswers={correctAnswers}
+        setCorrectAnswers={setCorrectAnswers}
       />
     </div>
   );
