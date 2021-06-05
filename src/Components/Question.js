@@ -14,8 +14,6 @@ const question = function({
   }
   const submitAnswerHandler = (e) => {
     e.preventDefault();
-    console.log("User answer: " + inputText);
-    console.log("Correct answer: " + currentElement.name);
     setQuestionsAsked(questionsAsked + 1);
     if(currentElement.name === inputText) {
       setCorrectAnswers(correctAnswers + 1);
@@ -26,9 +24,14 @@ const question = function({
   const inputTextHandler = (e) => {
     setInputText(e.target.value.trim().toLowerCase());
   }
+  const reset = () => {
+    setQuestionsAsked(0);
+    setCorrectAnswers(0);
+    setCurrentElement('');
+  }
   return (
     <div className="question">
-      <button onClick={setNewSymbol}>Start Game</button>
+      <button className="start-game" onClick={setNewSymbol}>Start Game</button>
       <p>Name the element with this symbol:</p>
       <div className="stage">
         <h1>{currentElement.symbol}</h1>
@@ -37,6 +40,7 @@ const question = function({
         <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
       </form>
       <h3>Your score: {correctAnswers}/{questionsAsked}</h3>
+      <button className="reset" onClick={reset}>Reset</button>
     </div>
   )
 }
