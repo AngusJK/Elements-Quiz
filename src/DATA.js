@@ -38,7 +38,17 @@ const elements = [
   { atno: 37, name: 'rubidium', symbol: 'Rb'},
   { atno: 38, name: 'strontium', symbol: 'Sr'},
   { atno: 39, name: 'yttrium', symbol: 'Y'},
-  { atno: 40, name: 'zirconium', symbol: 'Zr'}
+  { atno: 40, name: 'zirconium', symbol: 'Zr'},
+  { atno: 41, name: 'niobium', symbol: 'Nb'},
+  { atno: 42, name: 'molybdenum', symbol: 'Mo'},
+  { atno: 43, name: 'technetium', symbol: 'Tc'},
+  { atno: 44, name: 'ruthenium', symbol: 'Ru'},
+  { atno: 45, name: 'rhodium', symbol: 'Rh'},
+  { atno: 46, name: 'palladium', symbol: 'Pd'},
+  { atno: 47, name: 'silver', symbol: 'Ag'},
+  { atno: 48, name: 'cadmium', symbol: 'Cd'},
+  { atno: 49, name: 'indium', symbol: 'In'},
+  { atno: 50, name: 'tin', symbol: 'Sn'}
 ]
 
 export default elements;
