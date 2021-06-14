@@ -1,4 +1,6 @@
-const Question = function({ 
+import React from 'react';
+
+const GuessName = function({ 
     inputText, 
     setInputText, 
     elements, 
@@ -47,4 +49,4 @@ const Question = function({
   )
 }
 
-export default Question;
+export default GuessName;
