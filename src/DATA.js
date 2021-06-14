@@ -28,7 +28,17 @@ const elements = [
   { atno: 27, name: 'cobalt', symbol: 'Co'},
   { atno: 28, name: 'nickel', symbol: 'Ni'},
   { atno: 29, name: 'copper', symbol: 'Cu'},
-  { atno: 30, name: 'zinc', symbol: 'Zn'}
+  { atno: 30, name: 'zinc', symbol: 'Zn'},
+  { atno: 31, name: 'gallium', symbol: 'Ga'},
+  { atno: 32, name: 'germanium', symbol: 'Ge'},
+  { atno: 33, name: 'arsenic', symbol: 'As'},
+  { atno: 34, name: 'selenium', symbol: 'Se'},
+  { atno: 35, name: 'bromine', symbol: 'Br'},
+  { atno: 36, name: 'krypton', symbol: 'Kr'},
+  { atno: 37, name: 'rubidium', symbol: 'Rb'},
+  { atno: 38, name: 'strontium', symbol: 'Sr'},
+  { atno: 39, name: 'yttrium', symbol: 'Y'},
+  { atno: 40, name: 'zirconium', symbol: 'Zr'}
 ]
 
 export default elements;
