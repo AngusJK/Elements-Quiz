@@ -10,7 +10,7 @@ const Question = function({
     setCorrectAnswers
     }) {
   const setNewSymbol = () => {
-    let num = Math.floor(Math.random() * 40);
+    let num = Math.floor(Math.random() * 50);
     setCurrentElement(elements[num]);
   }
   const submitAnswerHandler = (e) => {
