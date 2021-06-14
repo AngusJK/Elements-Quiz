@@ -1,4 +1,4 @@
-const question = function({ 
+const Question = function({ 
     inputText, 
     setInputText, 
     elements, 
@@ -7,9 +7,10 @@ const question = function({
     questionsAsked, 
     setQuestionsAsked,
     correctAnswers,
-    setCorrectAnswers }) {
+    setCorrectAnswers
+    }) {
   const setNewSymbol = () => {
-    let num = Math.floor(Math.random() * 30);
+    let num = Math.floor(Math.random() * 40);
     setCurrentElement(elements[num]);
   }
   const submitAnswerHandler = (e) => {
@@ -29,6 +30,7 @@ const question = function({
     setCorrectAnswers(0);
     setCurrentElement('');
   }
+  
   return (
     <div className="question">
       <button className="start-game" onClick={setNewSymbol}>Start Game</button>
@@ -45,4 +47,4 @@ const question = function({
   )
 }
 
-export default question;
+export default Question;
