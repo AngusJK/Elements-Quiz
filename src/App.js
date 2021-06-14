@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import GuessName from './Components/GuessName';
 import GuessNumber from './Components/GuessNumber';
 import GuessSymbol from './Components/GuessSymbol';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //import Answer from './Components/Answer';
 import Elements from './DATA';
@@ -16,26 +17,27 @@ function App() {
   const [questionsAsked, setQuestionsAsked] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   return (
-    <div className="container">
-      <Header title="The Elements"/>
-      <GuessName 
-        elements={elements}  
-        currentElement={currentElement}
-        setCurrentElement={setCurrentElement}
-        inputText={inputText}
-        setInputText={setInputText}
-        questionsAsked={questionsAsked}
-        setQuestionsAsked={setQuestionsAsked}
-        correctAnswers={correctAnswers}
-        setCorrectAnswers={setCorrectAnswers}
-      />
-      <Home
-      />      
-      <GuessNumber
-      />
-      <GuessSymbol
-      />
-    </div>
+    <Router>
+      <div className="container">
+        <Header title="The Elements"/>
+        <Switch>
+          <GuessName 
+            elements={elements}  
+            currentElement={currentElement}
+            setCurrentElement={setCurrentElement}
+            inputText={inputText}
+            setInputText={setInputText}
+            questionsAsked={questionsAsked}
+            setQuestionsAsked={setQuestionsAsked}
+            correctAnswers={correctAnswers}
+            setCorrectAnswers={setCorrectAnswers}
+          />
+          <Route path="/" exact component={Home} />      
+          <Route path="/guessnumber" component={GuessNumber} />
+          <Route path="/guesssymbol" component={GuessSymbol} />
+        </Switch>
+      </div>
+    </Router>  
   );
 }
 
