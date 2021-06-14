@@ -1,8 +1,10 @@
 import React from 'react';
 
-function GuessSymbol() {
+const GuessSymbol = function() {
   return(
-    <h1>Guess the Symbol</h1>
+    <div>
+      <h1>Guess the Symbol</h1>
+    </div>
   )
 }
 
