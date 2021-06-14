@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Question from './Components/Question';
+import Home from './Components/Home';
+import GuessName from './Components/GuessName';
+import GuessNumber from './Components/GuessNumber';
+import GuessSymbol from './Components/GuessSymbol';
+
 //import Answer from './Components/Answer';
 import Elements from './DATA';
 
@@ -14,7 +18,7 @@ function App() {
   return (
     <div className="container">
       <Header title="The Elements"/>
-      <Question 
+      <GuessName 
         elements={elements}  
         currentElement={currentElement}
         setCurrentElement={setCurrentElement}
@@ -24,6 +28,12 @@ function App() {
         setQuestionsAsked={setQuestionsAsked}
         correctAnswers={correctAnswers}
         setCorrectAnswers={setCorrectAnswers}
+      />
+      <Home
+      />      
+      <GuessNumber
+      />
+      <GuessSymbol
       />
     </div>
   );
