@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+
 import Header from './Components/Header';
 import Home from './Components/Home';
 import GuessName from './Components/GuessName';
 import GuessNumber from './Components/GuessNumber';
 import GuessSymbol from './Components/GuessSymbol';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-//import Answer from './Components/Answer';
 import Elements from './DATA';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <div className="container">
         <Header title="The Elements"/>
         <Switch>
-          <GuessName 
+          <Route path="/guessname" render={(props) => <GuessName {...props} 
             elements={elements}  
             currentElement={currentElement}
             setCurrentElement={setCurrentElement}
@@ -30,7 +30,7 @@ function App() {
             questionsAsked={questionsAsked}
             setQuestionsAsked={setQuestionsAsked}
             correctAnswers={correctAnswers}
-            setCorrectAnswers={setCorrectAnswers}
+            setCorrectAnswers={setCorrectAnswers}/>}
           />
           <Route path="/" exact component={Home} />      
           <Route path="/guessnumber" component={GuessNumber} />
