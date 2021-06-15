@@ -10,7 +10,8 @@ const GuessName = function({
     questionsAsked, 
     setQuestionsAsked,
     correctAnswers,
-    setCorrectAnswers
+    setCorrectAnswers,
+    userName
     }) {
   const setNewSymbol = () => {
     let num = Math.floor(Math.random() * 50);
@@ -36,6 +37,7 @@ const GuessName = function({
   
   return (
     <div className="question">
+      <h3>Welcome, {userName}. Good luck!</h3>
       <button className="start-game" onClick={setNewSymbol}>Start Game</button>
       <p>Name the element with this symbol:</p>
       <div className="stage">
