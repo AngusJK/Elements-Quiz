@@ -16,12 +16,19 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [questionsAsked, setQuestionsAsked] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [userName, setUserName] = useState('');
   return (
     <Router>
       <div className="container">
         <Header title="The Elements"/>
         <Switch>
-          <Route path="/" exact component={Home} />      
+          <Route exact path="/" render={(props) => <Home {...props} 
+            userName={userName}
+            setUserName={setUserName}
+            inputText={inputText}
+            setInputText={setInputText}
+            />}
+          />      
           <Route path="/guessname" render={(props) => <GuessName {...props} 
             elements={elements}  
             currentElement={currentElement}
@@ -31,7 +38,9 @@ function App() {
             questionsAsked={questionsAsked}
             setQuestionsAsked={setQuestionsAsked}
             correctAnswers={correctAnswers}
-            setCorrectAnswers={setCorrectAnswers}/>}
+            setCorrectAnswers={setCorrectAnswers}
+            userName={userName}
+            />}
           />
           <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
             elements={elements}  
@@ -42,7 +51,9 @@ function App() {
             questionsAsked={questionsAsked}
             setQuestionsAsked={setQuestionsAsked}
             correctAnswers={correctAnswers}
-            setCorrectAnswers={setCorrectAnswers}/>} 
+            setCorrectAnswers={setCorrectAnswers}
+            userName={userName}
+            />} 
           />
           <Route path="/guesssymbol" render={(props) => <GuessSymbol {...props} 
             elements={elements}  
@@ -53,7 +64,9 @@ function App() {
             questionsAsked={questionsAsked}
             setQuestionsAsked={setQuestionsAsked}
             correctAnswers={correctAnswers}
-            setCorrectAnswers={setCorrectAnswers}/>} 
+            setCorrectAnswers={setCorrectAnswers}
+            userName={userName}
+            />} 
           />
         </Switch>
       </div>
