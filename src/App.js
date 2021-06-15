@@ -33,7 +33,17 @@ function App() {
             setCorrectAnswers={setCorrectAnswers}/>}
           />
           <Route path="/" exact component={Home} />      
-          <Route path="/guessnumber" component={GuessNumber} />
+          <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
+            elements={elements}  
+            currentElement={currentElement}
+            setCurrentElement={setCurrentElement}
+            inputText={inputText}
+            setInputText={setInputText}
+            questionsAsked={questionsAsked}
+            setQuestionsAsked={setQuestionsAsked}
+            correctAnswers={correctAnswers}
+            setCorrectAnswers={setCorrectAnswers}/>} 
+          />
           <Route path="/guesssymbol" component={GuessSymbol} />
         </Switch>
       </div>
