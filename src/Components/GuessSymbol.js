@@ -11,7 +11,9 @@ const GuessSymbol = function({
   setQuestionsAsked,
   correctAnswers,
   setCorrectAnswers,
-  userName
+  userName,
+  gameOver,
+  setGameOver
   }) {
 const setNewElementName = () => {
   let num = Math.floor(Math.random() * 50);
@@ -22,6 +24,8 @@ const submitAnswerHandler = (e) => {
   setQuestionsAsked(questionsAsked + 1);
   if(currentElement.symbol === inputText) {
     setCorrectAnswers(correctAnswers + 1);
+  } else {
+    setGameOver(true);
   }
   e.target.reset();
   setNewElementName();
@@ -33,29 +37,41 @@ const reset = () => {
   setQuestionsAsked(0);
   setCorrectAnswers(0);
   setCurrentElement('');
+  setGameOver(false);
 }
 const capitalize = function(s) {
   if (typeof(s) !== 'string') return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
-
-return (
-  <div className="question">
-    <button className="start-game" onClick={setNewElementName}>Start Game</button>
-    <p>What is the Chemical Symbol of this element?:</p>
+if (gameOver) {
+  return(
     <div>
-      <h1>{capitalize(currentElement.name)}</h1>
+      <h1>GAME OVER</h1>
+      <h3>Your score: {correctAnswers}</h3>
+      <Link to="/">
+        <button onClick={reset}>Home</button>
+      </Link>
     </div>
-    <form action="" className="answer" onSubmit={submitAnswerHandler}>
-      <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
-    </form>
-    <h3>Your score: {correctAnswers}/{questionsAsked}</h3>
-    <button className="reset" onClick={reset}>Reset</button>
-    <Link to="/">
-      <button>Home</button>
-    </Link>
-  </div>
-)
+  )} else {
+    return(
+      <div className="question">
+        <h3>Welcome, {userName}. Good luck!</h3>
+        <button className="start-game" onClick={setNewElementName}>Start Game</button>
+        <p>What is the Chemical Symbol of this element?:</p>
+        <div>
+          <h1>{capitalize(currentElement.name)}</h1>
+        </div>
+        <form action="" className="answer" onSubmit={submitAnswerHandler}>
+          <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+        </form>
+        <h3>Questions answered: {questionsAsked}</h3>
+        <button className="reset" onClick={reset}>Reset</button>
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+      </div>
+    )
+  }
 }
 
 export default GuessSymbol;
