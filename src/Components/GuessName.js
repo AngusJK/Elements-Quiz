@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GuessName = function({ 
     inputText, 
@@ -45,6 +46,9 @@ const GuessName = function({
       </form>
       <h3>Your score: {correctAnswers}/{questionsAsked}</h3>
       <button className="reset" onClick={reset}>Reset</button>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
     </div>
   )
 }
