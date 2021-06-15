@@ -21,6 +21,7 @@ function App() {
       <div className="container">
         <Header title="The Elements"/>
         <Switch>
+          <Route path="/" exact component={Home} />      
           <Route path="/guessname" render={(props) => <GuessName {...props} 
             elements={elements}  
             currentElement={currentElement}
@@ -32,7 +33,6 @@ function App() {
             correctAnswers={correctAnswers}
             setCorrectAnswers={setCorrectAnswers}/>}
           />
-          <Route path="/" exact component={Home} />      
           <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
             elements={elements}  
             currentElement={currentElement}
@@ -44,7 +44,17 @@ function App() {
             correctAnswers={correctAnswers}
             setCorrectAnswers={setCorrectAnswers}/>} 
           />
-          <Route path="/guesssymbol" component={GuessSymbol} />
+          <Route path="/guesssymbol" render={(props) => <GuessSymbol {...props} 
+            elements={elements}  
+            currentElement={currentElement}
+            setCurrentElement={setCurrentElement}
+            inputText={inputText}
+            setInputText={setInputText}
+            questionsAsked={questionsAsked}
+            setQuestionsAsked={setQuestionsAsked}
+            correctAnswers={correctAnswers}
+            setCorrectAnswers={setCorrectAnswers}/>} 
+          />
         </Switch>
       </div>
     </Router>  
