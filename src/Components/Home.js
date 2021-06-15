@@ -2,13 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const Home = function() {
+const Home = function({ userName, setUserName, inputText, setInputText }) {
+  const createUser = (e) => {
+    e.preventDefault();
+    setUserName(inputText);
+    e.target.reset();
+  };
+  const inputTextHandler = (e) => {
+    setInputText(e.target.value.trim());
+  }
   return(
     <div className="home">
-      <h1>Home Page</h1>
       <h3>Enter your Name</h3>
-      <form action="">
-        <input type="text" className="name-input" placeholder="name"/>
+      <form action="" onSubmit={createUser} className="username-form">
+        <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name"/>
         <button>Submit</button>
       </form>
       <h3>Choose a game</h3>
