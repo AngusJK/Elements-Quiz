@@ -12,11 +12,13 @@ import Elements from './DATA';
 
 function App() {
   const elements = Elements;
+  const [users, setUsers] = useState([]);
   const [currentElement, setCurrentElement] = useState('');
   const [inputText, setInputText] = useState('');
   const [questionsAsked, setQuestionsAsked] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [userName, setUserName] = useState('');
+  const [gameOver, setGameOver] = useState(false);
   return (
     <Router>
       <div className="container">
@@ -27,6 +29,8 @@ function App() {
             setUserName={setUserName}
             inputText={inputText}
             setInputText={setInputText}
+            users={users}
+            setUsers={setUsers}
             />}
           />      
           <Route path="/guessname" render={(props) => <GuessName {...props} 
@@ -40,6 +44,8 @@ function App() {
             correctAnswers={correctAnswers}
             setCorrectAnswers={setCorrectAnswers}
             userName={userName}
+            gameOver={gameOver}
+            setGameOver={setGameOver}
             />}
           />
           <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
@@ -53,6 +59,8 @@ function App() {
             correctAnswers={correctAnswers}
             setCorrectAnswers={setCorrectAnswers}
             userName={userName}
+            gameOver={gameOver}
+            setGameOver={setGameOver}
             />} 
           />
           <Route path="/guesssymbol" render={(props) => <GuessSymbol {...props} 
@@ -66,6 +74,8 @@ function App() {
             correctAnswers={correctAnswers}
             setCorrectAnswers={setCorrectAnswers}
             userName={userName}
+            gameOver={gameOver}
+            setGameOver={setGameOver}
             />} 
           />
         </Switch>
