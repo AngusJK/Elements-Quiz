@@ -18,8 +18,14 @@ const GuessSymbol = function({
   setSymbolScores
   }) {
 const setNewElementName = () => {
-  let num = Math.floor(Math.random() * 50);
+  let num = Math.floor(Math.random() * 118);
   setCurrentElement(elements[num]);
+}
+const updateSymbolScores = (name, number) => {
+  const latestScore = { key: symbolScores.length + 1, name: name, score: +number };
+  const newScores = [...symbolScores];
+  newScores.push(latestScore);
+  setSymbolScores(newScores);
 }
 const submitAnswerHandler = (e) => {
   e.preventDefault();
@@ -28,6 +34,7 @@ const submitAnswerHandler = (e) => {
     setCorrectAnswers(correctAnswers + 1);
   } else {
     setGameOver(true);
+    if(questionsAsked > 0) {updateSymbolScores(userName, questionsAsked)};
   }
   e.target.reset();
   setNewElementName();
