@@ -22,6 +22,7 @@ function App() {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [userName, setUserName] = useState('');
   const [gameOver, setGameOver] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
   const [nameScores, setNameScores] = useState([{ key: 1, name: "George", score: 15 }]);
   const [numberScores, setNumberScores] = useState([{ key: 1, name: "Marvin", score: 9 }]);
   const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Barton", score: 13 }]);
@@ -71,6 +72,8 @@ function App() {
             setGameOver={setGameOver}
             numberScores={numberScores}
             setNumberScores={setNumberScores}
+            gameStarted={gameStarted}
+            setGameStarted={setGameStarted}
             />} 
           />
           <Route path="/guesssymbol" render={(props) => <GuessSymbol {...props} 
