@@ -15,7 +15,9 @@ const GuessNumber = function({
   gameOver,
   setGameOver,
   numberScores,
-  setNumberScores
+  setNumberScores,
+  gameStarted,
+  setGameStarted
   }) {
 const setNewElementName = () => {
   let num = Math.floor(Math.random() * 118);
@@ -34,6 +36,7 @@ const submitAnswerHandler = (e) => {
     setCorrectAnswers(correctAnswers + 1);
   } else {
     setGameOver(true);
+    setGameStarted(false);
     if(questionsAsked > 0) {updateNumberScores(userName, questionsAsked)};
   }
   e.target.reset();
@@ -47,7 +50,12 @@ const reset = () => {
   setQuestionsAsked(0);
   setCorrectAnswers(0);
   setCurrentElement('');
-  setGameOver(false)
+  setGameOver(false);
+  setGameStarted(false);
+}
+const startGame = () => {
+  setNewElementName();
+  setGameStarted(true);
 }
 const capitalize = function(s) {
   if (typeof(s) !== 'string') return "";
@@ -63,25 +71,33 @@ if (gameOver) { return (
       </Link>
     </div>
   </div>
-)} else { 
+)} else if (gameStarted === false) { 
   return (
     <div className="question">
-      <h3>Welcome, {userName}. Good luck!</h3>
-      <button className="start-game" onClick={setNewElementName}>Start Game</button>
-      <p>What is the Atomic Number of this element?:</p>
-      <div>
-        <h1>{capitalize(currentElement.name)}</h1>
-      </div>
-      <form action="" className="answer" onSubmit={submitAnswerHandler}>
-        <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
-      </form>
-      <h3>Questions answered: {questionsAsked}</h3>
-      <button className="reset" onClick={reset}>Reset</button>
+      <h3>Welcome, {userName}.</h3>
+      <h5>In this game you will be shown the name of an element and you must type it's Atomic Number. Get as many consecutive answers correct as you can. Good luck!</h5>
+      <div><button className="start-game" onClick={startGame}>Start Game</button></div>
       <Link to="/">
-        <button>Home</button>
+        <button>Yikes! Get me out of here!</button>
       </Link>
     </div>
-  )}
+  )} else {
+    return (
+      <div>
+        <p>What is the Atomic Number of this element?:</p>
+        <div>
+          <h1>{capitalize(currentElement.name)}</h1>
+        </div>
+        <form action="" className="answer" onSubmit={submitAnswerHandler}>
+          <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+        </form>
+        <h3>Questions answered: {questionsAsked}</h3>
+        <Link to="/">
+          <button onClick={reset}>Home</button>
+        </Link>
+      </div>
+    )
+  }
 }
 
 export default GuessNumber;
