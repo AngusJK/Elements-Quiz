@@ -13,11 +13,20 @@ const GuessName = function({
     setCorrectAnswers,
     userName,
     gameOver,
-    setGameOver
+    setGameOver,
+    nameScores,
+    setNameScores
     }) {
   const setNewSymbol = () => {
     let num = Math.floor(Math.random() * 50);
     setCurrentElement(elements[num]);
+  };
+  const updateNameScores = (name, number) => {
+    const latestScore = { key: nameScores.length + 1, name: name, score: +number };
+    console.log(latestScore);
+    const newScores = [...nameScores];
+    newScores.push(latestScore);
+    setNameScores(newScores);
   }
   const submitAnswerHandler = (e) => {
     e.preventDefault();
@@ -26,6 +35,7 @@ const GuessName = function({
       setCorrectAnswers(correctAnswers + 1);
     } else {
       setGameOver(true);
+      updateNameScores(userName, questionsAsked)
     }
     e.target.reset();
     setNewSymbol();
