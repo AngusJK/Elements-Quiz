@@ -19,7 +19,7 @@ const NameScores = function({ nameScores }) {
       <h3>High scores for name game</h3>
       <ul>
         {scoresInOrder.map(score => (
-          <li>name: {score.name} score: {score.score}</li>
+          <li key={score.key}>name: {score.name}, score: {score.score}</li>
         ))}
       </ul>
       <Link to="/">
