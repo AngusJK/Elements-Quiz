@@ -7,6 +7,9 @@ import Home from './Components/Home';
 import GuessName from './Components/GuessName';
 import GuessNumber from './Components/GuessNumber';
 import GuessSymbol from './Components/GuessSymbol';
+import NameScores from './Components/NameScores';
+import NumberScores from './Components/NumberScores';
+import SymbolScores from './Components/SymbolScores';
 
 import Elements from './DATA';
 
@@ -19,6 +22,9 @@ function App() {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [userName, setUserName] = useState('');
   const [gameOver, setGameOver] = useState(false);
+  const [nameScores, setNameScores] = useState([{ key: 1, name: "George", score: 15 }]);
+  const [numberScores, setNumberScores] = useState([{ key: 1, name: "Marvin", score: 9 }]);
+  const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Barton", score: 13 }]);
   return (
     <Router>
       <div className="container">
@@ -46,6 +52,8 @@ function App() {
             userName={userName}
             gameOver={gameOver}
             setGameOver={setGameOver}
+            nameScores={nameScores}
+            setNameScores={setNameScores}
             />}
           />
           <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
@@ -61,6 +69,8 @@ function App() {
             userName={userName}
             gameOver={gameOver}
             setGameOver={setGameOver}
+            numberScores={numberScores}
+            setNumberScores={setNumberScores}
             />} 
           />
           <Route path="/guesssymbol" render={(props) => <GuessSymbol {...props} 
@@ -76,8 +86,22 @@ function App() {
             userName={userName}
             gameOver={gameOver}
             setGameOver={setGameOver}
+            symbolScores={symbolScores}
+            setSymbolScores={setSymbolScores}
             />} 
           />
+          <Route path="/namescores" render={(props) => <NameScores {...props}
+            nameScores={nameScores}
+            />}
+          />
+          <Route path="/numberscores" render={(props) => <NumberScores {...props}
+            numberScores={numberScores}
+            />}
+          />
+          <Route path="/symbolscores" render={(props) => <SymbolScores {...props}
+            symbolScores={symbolScores}
+            />}
+          />  
         </Switch>
       </div>
     </Router>  
