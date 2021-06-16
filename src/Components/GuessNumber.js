@@ -13,7 +13,9 @@ const GuessNumber = function({
   setCorrectAnswers,
   userName,
   gameOver,
-  setGameOver
+  setGameOver,
+  numberScores,
+  setNumberScores
   }) {
 const setNewElementName = () => {
   let num = Math.floor(Math.random() * 50);
