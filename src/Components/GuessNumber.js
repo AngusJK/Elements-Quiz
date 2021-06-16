@@ -18,8 +18,14 @@ const GuessNumber = function({
   setNumberScores
   }) {
 const setNewElementName = () => {
-  let num = Math.floor(Math.random() * 50);
+  let num = Math.floor(Math.random() * 118);
   setCurrentElement(elements[num]);
+}
+const updateNumberScores = (name, number) => {
+  const latestScore = { key: numberScores.length + 1, name: name, score: +number };
+  const newScores = [...numberScores];
+  newScores.push(latestScore);
+  setNumberScores(newScores);
 }
 const submitAnswerHandler = (e) => {
   e.preventDefault();
@@ -28,10 +34,12 @@ const submitAnswerHandler = (e) => {
     setCorrectAnswers(correctAnswers + 1);
   } else {
     setGameOver(true);
+    if(questionsAsked > 0) {updateNumberScores(userName, questionsAsked)};
   }
   e.target.reset();
   setNewElementName();
 }
+
 const inputTextHandler = (e) => {
   setInputText(e.target.value.trim());
 }
