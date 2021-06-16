@@ -1,18 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { compare } from '../Utils';
 
 const NameScores = function({ nameScores }) {
-  function compare(a, b) {
-    const scoreA = a.score;
-    const scoreB = b.score;
-    let comparison = 0;
-    if (scoreA > scoreB) {
-      comparison = -1;
-    } else if (scoreA < scoreB) {
-      comparison = 1; 
-    }
-    return comparison;
-  }
   const scoresInOrder = nameScores.sort(compare);
   return (
     <div>
