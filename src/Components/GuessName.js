@@ -21,6 +21,9 @@ const GuessName = function({
     let num = Math.floor(Math.random() * 118);
     setCurrentElement(elements[num]);
   };
+  const startGame = () => {
+    setNewSymbol();
+  }
   const updateNameScores = (name, number) => {
     const latestScore = { key: nameScores.length + 1, name: name, score: +number };
     const newScores = [...nameScores];
@@ -61,17 +64,16 @@ const GuessName = function({
   } else {
     return (
       <div className="question">
-        <h3>Welcome, {userName}. Good luck!</h3>
-        <button className="start-game" onClick={setNewSymbol}>Start Game</button>
-        <p>Name the element with this symbol:</p>
+        <h3>Good luck, {userName}!</h3>
+        <button className="start-game" onClick={startGame}>Start Game</button>
+        <p>Name the element with this symbol (spelling counts!):</p>
         <div className="stage">
           <h1>{currentElement.symbol}</h1>
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
-          <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+          <input className="answer-input" onChange={inputTextHandler} type="text" placeholder="type your answer here" />
         </form>
-        <h3>Questions answered: {questionsAsked}</h3>
-        <button className="reset" onClick={reset}>Reset</button>
+        <h3>Correct answers: {questionsAsked}</h3>
         <Link to="/">
           <button>Home</button>
         </Link>
