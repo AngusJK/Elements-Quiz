@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const Home = function({ userName, setUserName, inputText, setInputText, users, setUsers }) {
+const Home = function({ 
+    userName, 
+    setUserName, 
+    inputText, 
+    setInputText, 
+    users, 
+    setUsers
+  }) {
   const handleUsers = (user) => {
     const newUsers = [...users];
     newUsers.push(user);
@@ -29,11 +36,20 @@ const Home = function({ userName, setUserName, inputText, setInputText, users, s
           <Link to="/guessname">
             <li>Game 1 - guess the name from the symbol provided</li>
           </Link>
+          <Link to="/namescores">
+            <li>Name High Scores</li>
+          </Link>
           <Link to="/guessnumber">
             <li>Game 2 - guess the atomic number from the name provided</li>
           </Link>
+          <Link to="/numberscores">
+            <li>Number High Scores</li>
+          </Link>
           <Link to="/guesssymbol">
             <li>Game 3 - guess the chemical symbol from the name provided</li>
+          </Link>
+          <Link to="/symbolscores">
+            <li>Symbol High Scores</li>
           </Link>
         </ul> 
         <button onClick={logOutUser}>Log Out</button>
