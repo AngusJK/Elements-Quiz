@@ -22,11 +22,6 @@
   margin-top: 20px;
 }
 
-.start-game {
-  background-color: green;
-  color: white;
-}
-
 .reset {
   background-color: red;
   color: white;
@@ -38,4 +33,31 @@
 
 div {
   color: white;
+}
+
+.start-game-btn {
+  opacity: 0.8;
+  padding: 3px 10px;
+  background-color: yellowgreen;
+  color: white;
+  border-radius: 2px;
+  border: none;
+}
+
+.start-game-btn:hover {
+  opacity: 1.0;
+}
+
+.escape-btn {
+  opacity: 0.8;
+  padding: 3px 10px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.escape-btn:hover {
+  opacity: 1.0;
 }
