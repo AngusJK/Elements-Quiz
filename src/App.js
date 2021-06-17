@@ -55,6 +55,8 @@ function App() {
             setGameOver={setGameOver}
             nameScores={nameScores}
             setNameScores={setNameScores}
+            gameStarted={gameStarted}
+            setGameStarted={setGameStarted}
             />}
           />
           <Route path="/guessnumber" render={(props) => <GuessNumber {...props} 
@@ -91,6 +93,8 @@ function App() {
             setGameOver={setGameOver}
             symbolScores={symbolScores}
             setSymbolScores={setSymbolScores}
+            gameStarted={gameStarted}
+            setGameStarted={setGameStarted}
             />} 
           />
           <Route path="/namescores" render={(props) => <NameScores {...props}
