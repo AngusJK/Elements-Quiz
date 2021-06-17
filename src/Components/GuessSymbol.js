@@ -15,7 +15,9 @@ const GuessSymbol = function({
   gameOver,
   setGameOver,
   symbolScores,
-  setSymbolScores
+  setSymbolScores,
+  gameStarted,
+  setGameStarted
   }) {
 const setNewElementName = () => {
   let num = Math.floor(Math.random() * 118);
@@ -34,6 +36,7 @@ const submitAnswerHandler = (e) => {
     setCorrectAnswers(correctAnswers + 1);
   } else {
     setGameOver(true);
+    setGameStarted(false);
     if(questionsAsked > 0) {updateSymbolScores(userName, questionsAsked)};
   }
   e.target.reset();
@@ -47,6 +50,11 @@ const reset = () => {
   setCorrectAnswers(0);
   setCurrentElement('');
   setGameOver(false);
+  setGameStarted(false)
+}
+const startGame = () => {
+  setNewElementName();
+  setGameStarted(true);
 }
 const capitalize = function(s) {
   if (typeof(s) !== 'string') return "";
@@ -58,14 +66,23 @@ if (gameOver) {
       <h1>GAME OVER</h1>
       <h3>Your score: {correctAnswers}</h3>
       <Link to="/">
-        <button onClick={reset}>Home</button>
+        <button onClick={reset} className="escape-btn">Home</button>
       </Link>
     </div>
-  )} else {
+  )} else if (gameStarted === false) {
     return(
       <div className="question">
-        <h3>Welcome, {userName}. Good luck!</h3>
-        <button className="start-game" onClick={setNewElementName}>Start Game</button>
+        <h3>Welcome, {userName}.</h3>
+        <p>In this game you will be given the name of an element from the Periodic Table and you must give it's atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck!</p>
+        <div><button className="start-game-btn" onClick={startGame}>Start Game</button></div>
+        <Link to="/">
+          <button className="escape-btn" onClick={reset}>Hell no.</button>
+        </Link>
+      </div>
+    )
+  } else {
+    return (
+      <div>
         <p>What is the Chemical Symbol of this element?:</p>
         <div>
           <h1>{capitalize(currentElement.name)}</h1>
@@ -74,9 +91,8 @@ if (gameOver) {
           <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
-        <button className="reset" onClick={reset}>Reset</button>
         <Link to="/">
-          <button>Home</button>
+          <button className="escape-btn" onClick={reset}>Home</button>
         </Link>
       </div>
     )
