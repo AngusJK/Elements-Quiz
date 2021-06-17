@@ -15,7 +15,9 @@ const GuessName = function({
     gameOver,
     setGameOver,
     nameScores,
-    setNameScores
+    setNameScores,
+    gameStarted,
+    setGameStarted
     }) {
   const setNewSymbol = () => {
     let num = Math.floor(Math.random() * 118);
@@ -23,6 +25,7 @@ const GuessName = function({
   };
   const startGame = () => {
     setNewSymbol();
+    setGameStarted(true);
   }
   const updateNameScores = (name, number) => {
     const latestScore = { key: nameScores.length + 1, name: name, score: +number };
@@ -37,6 +40,7 @@ const GuessName = function({
       setCorrectAnswers(correctAnswers + 1);
     } else {
       setGameOver(true);
+      setGameStarted(false)
       if(questionsAsked > 0) {updateNameScores(userName, questionsAsked)}
     }
     e.target.reset();
@@ -61,12 +65,20 @@ const GuessName = function({
         </Link>
       </div>
     )
-  } else {
+  } else if (gameStarted === false){
     return (
       <div className="question">
-        <h3>Good luck, {userName}!</h3>
-        <button className="start-game" onClick={startGame}>Start Game</button>
-        <p>Name the element with this symbol (spelling counts!):</p>
+        <h3>Welcome, {userName}!</h3>
+        <p>In this game you will be shown a symbol from the Periodic Table and you have to name the element that that symbol designates. The questions continue until you get an answer wrong. Good luck! And remember, spelling counts! </p>
+        <div><button className="start-game-btn" onClick={startGame}>Start Game</button></div>
+        <Link to="/">
+          <button className="escape-btn">Hard pass. Take me back.</button>
+        </Link>
+      </div>
+    )
+  } else {
+    return (
+      <div>
         <div className="stage">
           <h1>{currentElement.symbol}</h1>
         </div>
@@ -75,12 +87,11 @@ const GuessName = function({
         </form>
         <h3>Correct answers: {questionsAsked}</h3>
         <Link to="/">
-          <button>Home</button>
+          <button className="escape-btn">Home</button>
         </Link>
       </div>
     )
   }
-  
 }
 
 export default GuessName;
