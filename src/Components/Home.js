@@ -58,10 +58,10 @@ const Home = function({
   } else {
     return (
       <div className="sign-in-form">
-        <h3 id="enter-name">Enter your Name</h3>
+        <h3 id="enter-name">Please sign in</h3>
         <form action="" onSubmit={createUser} className="username-form">
           <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name"/>
-          <button>Submit</button>
+          <div><button className="name-submit">SUBMIT</button></div>
         </form>
       </div>
     )
