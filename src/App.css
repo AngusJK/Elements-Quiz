@@ -1,10 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
-  color: rgb(0, 247, 255);
+  color: #00f7ff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: xx-large;
   text-align: center;
 }
 
+.sign-in-form {
+  background-color: grey;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.name-input {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+}
+
+.name-submit {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: #00f7ff;
+}
+
+.name-submit:hover {
+  opacity: 90%;
+}
+#enter-name {
+  margin: 0 0 5px 0;
+}
 .question, .answer {
   color: white;
   text-align: center;
