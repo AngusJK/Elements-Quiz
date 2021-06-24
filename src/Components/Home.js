@@ -29,16 +29,21 @@ const Home = function({
   }
   if (userName) {
     return (
-      <div>
+      <div className="home-page">
         <h2>Welcome, {userName}.</h2>
         <h3>Choose a game to play:</h3>
         <ul className="nav-links">
+          <li>Game 1 - guess the name from the symbol provided</li>
+          <button className="play">
           <Link to="/guessname">
-            <li>Game 1 - guess the name from the symbol provided</li>
+            Play
           </Link>
+          </button>
+          <button className="high-scores">
           <Link to="/namescores">
-            <li>Name High Scores</li>
+            High Scores
           </Link>
+          </button>
           <Link to="/guessnumber">
             <li>Game 2 - guess the atomic number from the name provided</li>
           </Link>
@@ -52,7 +57,7 @@ const Home = function({
             <li>Symbol High Scores</li>
           </Link>
         </ul> 
-        <button onClick={logOutUser}>Log Out</button>
+        <button onClick={logOutUser} className="logout">Log Out</button>
       </div>
     )
   } else {
