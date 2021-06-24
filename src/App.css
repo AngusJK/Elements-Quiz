@@ -25,18 +25,40 @@
   border-radius: 3px;
 }
 
+.name-input:focus {
+  outline: none;
+}
+
 .name-submit {
   width: 100%;
   border: 0;
   border-radius: 3px;
   background-color: #00f7ff;
+  font-weight: 600;
 }
 
 .name-submit:hover {
   opacity: 90%;
 }
+
 #enter-name {
   margin: 0 0 5px 0;
+}
+
+.home-page {
+  background-color: grey;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.logout {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: #00f7ff;
+  font-weight: 600;
 }
 .question, .answer {
   color: white;
@@ -93,4 +115,8 @@ div {
 
 .escape-btn:hover {
   opacity: 1.0;
+}
+
+.nav-links {
+  list-style-type: none;
 }
