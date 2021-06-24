@@ -57,8 +57,8 @@ const Home = function({
     )
   } else {
     return (
-      <div>
-        <h3>Enter your Name</h3>
+      <div className="sign-in-form">
+        <h3 id="enter-name">Enter your Name</h3>
         <form action="" onSubmit={createUser} className="username-form">
           <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name"/>
           <button>Submit</button>
