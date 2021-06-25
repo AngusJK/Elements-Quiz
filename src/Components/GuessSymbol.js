@@ -66,7 +66,7 @@ if (gameOver) {
       <h1>GAME OVER</h1>
       <h3>Your score: {correctAnswers}</h3>
       <Link to="/">
-        <button onClick={reset} className="escape-btn">Home</button>
+        <button onClick={reset} className="btn escape-btn">Home</button>
       </Link>
     </div>
   )} else if (gameStarted === false) {
