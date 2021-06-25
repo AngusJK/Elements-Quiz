@@ -76,9 +76,9 @@ if (gameOver) { return (
     <div className="question">
       <h3>Welcome, {userName}.</h3>
       <p>In this game you will be shown the name of an element and you must type it's Atomic Number. Get as many consecutive answers correct as you can. Good luck!</p>
-      <div><button className="start-game-btn" onClick={startGame}>Start Game</button></div>
+      <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
       <Link to="/">
-        <button className="escape-btn">Yikes! Get me out of here!</button>
+        <button className="btn escape-btn">Yikes! Get me out of here!</button>
       </Link>
     </div>
   )} else {
@@ -93,7 +93,7 @@ if (gameOver) { return (
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
-          <button onClick={reset}>Home</button>
+          <button className="btn escape-btn" onClick={reset}>Home</button>
         </Link>
       </div>
     )

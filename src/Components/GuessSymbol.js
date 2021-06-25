@@ -74,9 +74,9 @@ if (gameOver) {
       <div className="question">
         <h3>Welcome, {userName}.</h3>
         <p>In this game you will be given the name of an element from the Periodic Table and you must give it's atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck!</p>
-        <div><button className="start-game-btn" onClick={startGame}>Start Game</button></div>
+        <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
-          <button className="escape-btn" onClick={reset}>Hell no.</button>
+          <button className="btn escape-btn" onClick={reset}>Hell no.</button>
         </Link>
       </div>
     )
@@ -92,7 +92,7 @@ if (gameOver) {
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
-          <button className="escape-btn" onClick={reset}>Home</button>
+          <button className="btn escape-btn" onClick={reset}>Home</button>
         </Link>
       </div>
     )

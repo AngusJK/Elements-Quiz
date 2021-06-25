@@ -13,7 +13,7 @@ const NameScores = function({ nameScores }) {
         ))}
       </ul>
       <Link to="/">
-        Go Back
+        <div><button className="btn">Go Back</button></div>
       </Link>
     </div>
   )

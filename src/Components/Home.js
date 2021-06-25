@@ -34,27 +34,37 @@ const Home = function({
         <h3>Choose a game to play:</h3>
         <ul className="nav-links">
           <li>Game 1 - guess the name from the symbol provided</li>
-          <button className="play">
           <Link to="/guessname">
-            Play
+            <button className="btn play">
+              Play
+            </button>
           </Link>
-          </button>
-          <button className="high-scores">
           <Link to="/namescores">
-            High Scores
+            <button className="btn high-scores">
+              High Scores
+            </button>
           </Link>
-          </button>
+          <li>Game 2 - guess the atomic number from the name provided</li>
           <Link to="/guessnumber">
-            <li>Game 2 - guess the atomic number from the name provided</li>
+            <button className="btn play">
+              Play
+            </button>
           </Link>
           <Link to="/numberscores">
-            <li>Number High Scores</li>
+            <button className="btn high-scores">
+              High Scores
+            </button>
           </Link>
+          <li>Game 3 - guess the chemical symbol from the name provided</li>
           <Link to="/guesssymbol">
-            <li>Game 3 - guess the chemical symbol from the name provided</li>
+            <button className="btn play">
+              Play
+            </button>
           </Link>
           <Link to="/symbolscores">
-            <li>Symbol High Scores</li>
+            <button className="btn high-scores">
+              High Scores
+            </button>
           </Link>
         </ul> 
         <button onClick={logOutUser} className="logout">Log Out</button>
@@ -66,7 +76,7 @@ const Home = function({
         <h3 id="enter-name">Please sign in</h3>
         <form action="" onSubmit={createUser} className="username-form">
           <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name"/>
-          <div><button className="name-submit">SUBMIT</button></div>
+          <div><button className="btn name-submit">SUBMIT</button></div>
         </form>
       </div>
     )

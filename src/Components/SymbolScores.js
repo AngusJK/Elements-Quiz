@@ -13,7 +13,7 @@ const SymbolScores = function({ symbolScores }) {
         ))}
       </ul>
       <Link to="/">
-        Go Back
+        <div><button className="btn">Go Back</button></div>
       </Link>
     </div>
   )

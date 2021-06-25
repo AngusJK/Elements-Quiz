@@ -70,9 +70,9 @@ const GuessName = function({
       <div className="question">
         <h3>Welcome, {userName}!</h3>
         <p>In this game you will be shown a symbol from the Periodic Table and you have to name the element that that symbol designates. The questions continue until you get an answer wrong. Good luck! And remember, spelling counts! </p>
-        <div><button className="start-game-btn" onClick={startGame}>Start Game</button></div>
+        <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
-          <button className="escape-btn">Hard pass. Take me back.</button>
+          <button className="btn escape-btn">Hard pass. Take me back.</button>
         </Link>
       </div>
     )
@@ -87,7 +87,7 @@ const GuessName = function({
         </form>
         <h3>Correct answers: {questionsAsked}</h3>
         <Link to="/">
-          <button className="escape-btn">Home</button>
+          <button className="btn escape-btn">Home</button>
         </Link>
       </div>
     )
