@@ -1,6 +1,10 @@
+/* UNIVERSAL */
+
 * {
   box-sizing: border-box;
 }
+
+/* HEADER */
 
 .header {
   color: #00f7ff;
@@ -17,6 +21,74 @@
   border-radius: 3px;
 }
 
+/* BUTTONS */
+
+.btn {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 90%;
+}
+
+.name-submit {
+  background-color: #00f7ff;
+}
+
+.reset {
+  background-color: red;
+  color: white;
+}
+
+.home {
+  color: white;
+}
+
+.play {
+  text-decoration: none;
+}
+
+.high-scores {
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+.start-game-btn {
+  opacity: 0.8;
+  padding: 3px 10px;
+  background-color: yellowgreen;
+  color: white;
+  border-radius: 2px;
+  border: none;
+}
+
+.start-game-btn:hover {
+  opacity: 1.0;
+}
+
+.escape-btn {
+  opacity: 0.8;
+  padding: 3px 10px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.escape-btn:hover {
+  opacity: 1.0;
+}
+
+/* SIGN IN PAGE */ 
+
+#enter-name {
+  margin: 0 0 5px 0;
+}
+
 .name-input {
   padding: 5px;
   margin-bottom: 10px;
@@ -27,22 +99,6 @@
 
 .name-input:focus {
   outline: none;
-}
-
-.name-submit {
-  width: 100%;
-  border: 0;
-  border-radius: 3px;
-  background-color: #00f7ff;
-  font-weight: 600;
-}
-
-.name-submit:hover {
-  opacity: 90%;
-}
-
-#enter-name {
-  margin: 0 0 5px 0;
 }
 
 .home-page {
@@ -77,46 +133,13 @@
   margin-top: 20px;
 }
 
-.reset {
-  background-color: red;
-  color: white;
-}
-
-.home {
-  color: white;
-}
 
 div {
   color: white;
 }
 
-.start-game-btn {
-  opacity: 0.8;
-  padding: 3px 10px;
-  background-color: yellowgreen;
-  color: white;
-  border-radius: 2px;
-  border: none;
-}
-
-.start-game-btn:hover {
-  opacity: 1.0;
-}
-
-.escape-btn {
-  opacity: 0.8;
-  padding: 3px 10px;
-  border: none;
-  background-color: tomato;
-  color: white;
-  border-radius: 2px;
-  margin-top: 10px;
-}
-
-.escape-btn:hover {
-  opacity: 1.0;
-}
 
 .nav-links {
   list-style-type: none;
 }
+
