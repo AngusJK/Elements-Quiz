@@ -61,15 +61,14 @@ const GuessName = function({
         <h1>GAME OVER</h1>
         <h3>Your score: {correctAnswers}</h3>
         <Link to="/">
-          <button onClick={reset}>Home</button>
+          <button className="btn escape-btn" onClick={reset}>Home</button>
         </Link>
       </div>
     )
   } else if (gameStarted === false){
     return (
       <div className="question">
-        <h3>Welcome, {userName}!</h3>
-        <p>In this game you will be shown a symbol from the Periodic Table and you have to name the element that that symbol designates. The questions continue until you get an answer wrong. Good luck! And remember, spelling counts! </p>
+        <p>In this game you will be shown a symbol from the Periodic Table and you have to name the element that that symbol designates. The questions continue until you get an answer wrong. Good luck, {userName}! And remember, spelling counts! </p>
         <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
           <button className="btn escape-btn">Hard pass. Take me back.</button>
