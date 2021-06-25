@@ -67,7 +67,7 @@ if (gameOver) { return (
       <h1>GAME OVER</h1>
       <h3>Your score: {correctAnswers}</h3>
       <Link to="/">
-        <button onClick={reset}>Home</button>
+        <button className="btn escape-btn" onClick={reset}>Home</button>
       </Link>
     </div>
   </div>
