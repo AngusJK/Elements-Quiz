@@ -49,34 +49,39 @@
 
 .play {
   text-decoration: none;
+  background-color: lightgreen;
 }
 
 .high-scores {
   appearance:none;
   -webkit-appearance:none;
+  background-color: lightpink;
 }
 
 .start-game-btn {
   opacity: 0.8;
   padding: 3px 10px;
-  background-color: yellowgreen;
-  color: white;
-  border-radius: 2px;
-  border: none;
+  background-color: #00f7ff;
+  color: black;
+  border-radius: 8px;
+  border: 3px solid white;
+  width: 50%;
 }
 
 .start-game-btn:hover {
   opacity: 1.0;
+  
 }
 
 .escape-btn {
   opacity: 0.8;
   padding: 3px 10px;
-  border: none;
-  background-color: tomato;
+  border: 3px solid #00f7ff;
+  background-color: black;
   color: white;
-  border-radius: 2px;
+  border-radius: 8px;
   margin-top: 10px;
+  width: 50%;
 }
 
 .escape-btn:hover {
@@ -102,7 +107,7 @@
 }
 
 .home-page {
-  background-color: grey;
+  background-color: #696969;
   width: 70%;
   margin: 0 auto;
   padding: 10px;
@@ -116,7 +121,9 @@
   background-color: #00f7ff;
   font-weight: 600;
 }
-.question, .answer {
+.question {
+  width: 75%;
+  margin: 0 auto;
   color: white;
   text-align: center;
 }
@@ -141,5 +148,9 @@ div {
 
 .nav-links {
   list-style-type: none;
+  padding: 0;
 }
 
+.game {
+  margin: 12px 0;
+}
