@@ -62,20 +62,17 @@ const capitalize = function(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 if (gameOver) { return (
-  <div>
-    <div>
-      <h1>GAME OVER</h1>
-      <h3>Your score: {correctAnswers}</h3>
-      <Link to="/">
-        <button className="btn escape-btn" onClick={reset}>Home</button>
-      </Link>
-    </div>
+  <div className="game-over">
+    <h1 className="game-over-headline">GAME OVER</h1>
+    <h3>Your score: {correctAnswers}</h3>
+    <Link to="/">
+      <button className="btn escape-btn" onClick={reset}>Home</button>
+    </Link>
   </div>
 )} else if (gameStarted === false) { 
   return (
     <div className="question">
-      <h3>Welcome, {userName}.</h3>
-      <p>In this game you will be shown the name of an element and you must type it's Atomic Number. Get as many consecutive answers correct as you can. Good luck!</p>
+      <p>In this game you will be shown the name of an element and you must type it's Atomic Number. Get as many consecutive answers correct as you can. Good luck, {userName}!</p>
       <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
       <Link to="/">
         <button className="btn escape-btn">Yikes! Get me out of here!</button>
@@ -83,13 +80,13 @@ if (gameOver) { return (
     </div>
   )} else {
     return (
-      <div>
+      <div className="game-on">
         <p>What is the Atomic Number of this element?:</p>
         <div>
           <h1>{capitalize(currentElement.name)}</h1>
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
-          <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+          <input id="number-answer-input" onChange={inputTextHandler} type="text" autoComplete="off" />
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
