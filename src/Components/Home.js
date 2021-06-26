@@ -33,12 +33,14 @@ const Home = function({
         <h5>Welcome, {userName}. Choose a game to play:</h5>
         <ul className="nav-links">
           <div className="game">
-            <li>Game 1 - guess the name from the symbol provided</li>
+            <li>Game 1 - guess the element name from the symbol provided</li>
+            <div>
             <Link to="/guessname">
               <button className="btn play">
                 Play
               </button>
             </Link>
+            </div>
             <Link to="/namescores">
               <button className="btn high-scores">
                 High Scores
@@ -46,7 +48,7 @@ const Home = function({
             </Link>
           </div>
           <div className="game">
-            <li>Game 2 - guess the atomic number from the name provided</li>
+            <li>Game 2 - guess the atomic number from the element name provided</li>
             <Link to="/guessnumber">
               <button className="btn play">
                 Play
@@ -59,7 +61,7 @@ const Home = function({
             </Link>
           </div>
           <div className="game">
-            <li>Game 3 - guess the chemical symbol from the name provided</li>
+            <li>Game 3 - guess the chemical symbol from the element name provided</li>
             <Link to="/guesssymbol">
               <button className="btn play">
                 Play
