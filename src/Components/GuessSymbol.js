@@ -62,8 +62,8 @@ const capitalize = function(s) {
 }
 if (gameOver) {
   return(
-    <div>
-      <h1>GAME OVER</h1>
+    <div className="game-over">
+      <h1 className="game-over-headline">GAME OVER</h1>
       <h3>Your score: {correctAnswers}</h3>
       <Link to="/">
         <button onClick={reset} className="btn escape-btn">Home</button>
@@ -72,8 +72,7 @@ if (gameOver) {
   )} else if (gameStarted === false) {
     return(
       <div className="question">
-        <h3>Welcome, {userName}.</h3>
-        <p>In this game you will be given the name of an element from the Periodic Table and you must give it's atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck!</p>
+        <p>In this game you will be given the name of an element from the Periodic Table and you must give it's atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck, {userName}!</p>
         <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
           <button className="btn escape-btn" onClick={reset}>Hell no.</button>
@@ -82,13 +81,13 @@ if (gameOver) {
     )
   } else {
     return (
-      <div>
+      <div className="game-on">
         <p>What is the Chemical Symbol of this element?:</p>
         <div>
           <h1>{capitalize(currentElement.name)}</h1>
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
-          <input onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+          <input id="symbol-answer-input"onChange={inputTextHandler} type="text" autoComplete="off" />
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
