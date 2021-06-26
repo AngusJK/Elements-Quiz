@@ -54,11 +54,12 @@ const GuessName = function({
     setCorrectAnswers(0);
     setCurrentElement('');
     setGameOver(false);
+    setGameStarted(false);
   }
   if (gameOver) {
     return (
-      <div>
-        <h1>GAME OVER</h1>
+      <div className="game-over">
+        <h1 className="game-over-headline">GAME OVER</h1>
         <h3>Your score: {correctAnswers}</h3>
         <Link to="/">
           <button className="btn escape-btn" onClick={reset}>Home</button>
@@ -77,16 +78,18 @@ const GuessName = function({
     )
   } else {
     return (
-      <div>
+      <div className="game-on">
         <div className="stage">
           <h1>{currentElement.symbol}</h1>
         </div>
-        <form action="" className="answer" onSubmit={submitAnswerHandler}>
+        
+        <form action="" className="answer-form" onSubmit={submitAnswerHandler}>
           <input className="answer-input" onChange={inputTextHandler} type="text" placeholder="type your answer here" />
         </form>
-        <h3>Correct answers: {questionsAsked}</h3>
+        
+        <h4>Correct answers: {questionsAsked}</h4>
         <Link to="/">
-          <button className="btn escape-btn">Home</button>
+          <button className="btn escape-btn" onClick={reset}>Home</button>
         </Link>
       </div>
     )
