@@ -24,14 +24,17 @@
 /* BUTTONS */
 
 .btn {
-  width: 100%;
-  border: 0;
-  border-radius: 3px;
+  opacity: 0.8;
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 2px solid white;
+  width: 50%;
   font-weight: 600;
+  margin: 1px;
 }
 
 .btn:hover {
-  opacity: 90%;
+  opacity: 100%;
 }
 
 .name-submit {
@@ -49,13 +52,15 @@
 
 .play {
   text-decoration: none;
-  background-color: lightgreen;
+  background-color: #00f7ff;
 }
 
 .high-scores {
   appearance:none;
   -webkit-appearance:none;
-  background-color: lightpink;
+  background-color: black;
+  color: white;
+  border-color: #00f7ff;
 }
 
 .start-game-btn {
@@ -88,6 +93,15 @@
   opacity: 1.0;
 }
 
+.logout {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: white;
+  font-weight: 600;
+}
+
+
 /* SIGN IN PAGE */ 
 
 #enter-name {
@@ -107,24 +121,24 @@
 }
 
 .home-page {
-  background-color: #696969;
+  
   width: 70%;
   margin: 0 auto;
   padding: 10px;
   border-radius: 3px;
 }
 
-.logout {
-  width: 100%;
-  border: 0;
-  border-radius: 3px;
-  background-color: #00f7ff;
-  font-weight: 600;
-}
+
 .question {
   width: 75%;
   margin: 0 auto;
   color: white;
+  text-align: center;
+}
+
+.game-on {
+  margin: 0 auto;
+  width: 75%;
   text-align: center;
 }
 
@@ -133,13 +147,28 @@
   height: 85px;
   border: 1px solid white;
   margin: 0 auto;
-  
+  text-align: center;
 }
 
-.answer {
-  margin-top: 20px;
+.answer-form {
+  text-align: center;
+  margin-top: 15px;
 }
 
+.answer-input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 3px;
+}
+
+#symbol-answer-input {
+  width: 50px;
+}
+
+#number-answer-input {
+  width: 50px;
+}
 
 div {
   color: white;
@@ -153,4 +182,12 @@ div {
 
 .game {
   margin: 12px 0;
+}
+
+.game-over {
+  text-align: center;
+}
+
+.game-over-headline {
+  color: red;
 }
