@@ -7,11 +7,18 @@ const NameScores = function({ nameScores }) {
   return (
     <div>
       <h3>High scores for name game</h3>
-      <ul>
+      <table className="high-scores">
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
         {scoresInOrder.map(score => (
-          <li key={score.key}>name: {score.name}, score: {score.score}</li>
+          <tr key={score.key}>
+            <td>{score.name}</td>
+            <td>{score.score}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
       <Link to="/">
         <div><button className="btn">Go Back</button></div>
       </Link>
