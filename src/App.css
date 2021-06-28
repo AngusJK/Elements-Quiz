@@ -191,3 +191,7 @@ div {
 .game-over-headline {
   color: red;
 }
+
+.high-scores {
+  list-style-type: none;
+}
