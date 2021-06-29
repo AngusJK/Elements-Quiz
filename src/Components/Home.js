@@ -30,7 +30,7 @@ const Home = function({
   if (userName) {
     return (
       <div className="home-page">
-        <h5>Welcome, {userName}. Choose a game to play:</h5>
+        <h6>Welcome, {userName}. Choose a game to play:</h6>
         <ul className="nav-links">
           <div className="game">
             <li>Game 1 - guess the element name from the symbol provided</li>
