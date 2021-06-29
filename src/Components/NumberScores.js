@@ -17,13 +17,13 @@ const NumberScores = function({ numberScores }) {
           <tr id="columns">
             <th id="rank">Rank</th>
             <th>Name</th>
-            <th>Score</th>
+            <th id="score">Score</th>
           </tr>
         </thead>
         <tbody>
           {scoresInOrder.map(score => (
             <tr key={score.key}>
-              <td>{score.rank}</td>
+              <td className="rank-number">{score.rank}</td>
               <td>{score.name}</td>
               <td>{score.score}</td>
             </tr>
