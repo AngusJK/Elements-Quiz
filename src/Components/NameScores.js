@@ -5,22 +5,26 @@ import { compare } from '../Utils';
 const NameScores = function({ nameScores }) {
   const scoresInOrder = nameScores.sort(compare);
   return (
-    <div>
-      <h3>High scores for name game</h3>
+    <div id="high-scores">
+      <h3>High scores for Game 1</h3>
       <table className="high-scores">
-        <tr>
-          <th>Name</th>
-          <th>Score</th>
-        </tr>
-        {scoresInOrder.map(score => (
-          <tr key={score.key}>
-            <td>{score.name}</td>
-            <td>{score.score}</td>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {scoresInOrder.map(score => (
+            <tr key={score.key}>
+              <td>{score.name}</td>
+              <td>{score.score}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
       <Link to="/">
-        <div><button className="btn">Go Back</button></div>
+        <div><button className="btn escape-btn">Go Back</button></div>
       </Link>
     </div>
   )
