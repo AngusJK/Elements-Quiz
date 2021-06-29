@@ -56,11 +56,19 @@ const GuessName = function({
     setGameOver(false);
     setGameStarted(false);
   }
+  const replay = () => {
+    setQuestionsAsked(0);
+    setCorrectAnswers(0);
+    setNewSymbol();
+    setGameOver(false);
+    setGameStarted(true);
+  }
   if (gameOver) {
     return (
       <div className="game-over">
         <h1 className="game-over-headline">GAME OVER</h1>
-        <h3>Your score: {correctAnswers}</h3>
+        <h3>You got {correctAnswers} answers correct</h3>
+        <button className="btn start-game-btn" onClick={replay}>Play Again</button>
         <Link to="/">
           <button className="btn escape-btn" onClick={reset}>Home</button>
         </Link>
