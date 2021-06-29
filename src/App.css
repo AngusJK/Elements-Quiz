@@ -192,6 +192,28 @@ div {
   color: red;
 }
 
+#high-scores {
+  margin: 0 auto;
+  width: 70%;
+}
+
 .high-scores {
   list-style-type: none;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 10px;
+}
+
+th {
+  text-align: left;
 }
