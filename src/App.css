@@ -1,3 +1,9 @@
+/* COLOURS */
+
+:root {
+  --primary-color: #00f7ff;
+}
+
 /* UNIVERSAL */
 
 * {
@@ -7,7 +13,7 @@
 /* HEADER */
 
 .header {
-  color: #00f7ff;
+  color: var(--primary-color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: xx-large;
   text-align: center;
@@ -211,7 +217,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid white;
+  border: 2px solid grey;
   border-collapse: collapse;
 }
 
@@ -230,4 +236,12 @@ th {
 
 #rank {
   width: 8%;
+}
+
+#score {
+  width: 20%;
+}
+
+.rank-number {
+  color: var(--primary-color);
 }
