@@ -1,7 +1,7 @@
 const Header = function({ title }) {
   return (
     <header className="header">
-      <h1>{ title }</h1>
+      <h1 id="title">{ title }</h1>
     </header>
   )
 }
