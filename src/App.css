@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+#title {
+  margin: 0;
+}
+
 .sign-in-form {
   background-color: grey;
   width: 50%;
@@ -121,7 +125,6 @@
 }
 
 .home-page {
-  
   width: 70%;
   margin: 0 auto;
   padding: 10px;
@@ -178,10 +181,11 @@ div {
 .nav-links {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 .game {
-  margin: 12px 0;
+  margin-bottom: 40px;
 }
 
 .game-over {
@@ -202,6 +206,7 @@ div {
 }
 
 table {
+  table-layout: auto;
   width: 100%;
 }
 
@@ -216,4 +221,13 @@ td, th {
 
 th {
   text-align: left;
+}
+
+#columns {
+  background-color: #9ef7fa;
+  color: black;
+}
+
+#rank {
+  width: 8%;
 }
