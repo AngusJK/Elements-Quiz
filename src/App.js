@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -26,6 +26,9 @@ function App() {
   const [nameScores, setNameScores] = useState([{ key: 1, name: "George", score: 15 }]);
   const [numberScores, setNumberScores] = useState([{ key: 1, name: "Marvin", score: 9 }]);
   const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Barton", score: 13 }]);
+  useEffect(() => {
+    
+  }, []);
   return (
     <Router>
       <div className="container">
