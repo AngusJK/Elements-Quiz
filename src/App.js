@@ -27,8 +27,8 @@ function App() {
   const [numberScores, setNumberScores] = useState([{ key: 1, name: "Marvin", score: 9 }]);
   const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Barton", score: 13 }]);
   useEffect(() => {
-    
-  }, []);
+    localStorage.setItem('nameScores', JSON.stringify(nameScores));
+  }, [nameScores]);
   return (
     <Router>
       <div className="container">
