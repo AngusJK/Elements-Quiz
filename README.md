@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+## Overview
+
+This app is designed as a tool to help learn the names, chemical symbols, and atomic numbers of the elements of the periodic table. 
+Game 1 shows the user randomly selected chemical symbols and asks them to supply the corresponding element name.
+Game 2 shows the user randomly selected element names and asks them to supply the corresponding atomic number.
+Game 3 shows the user randomly selected element names and asks them to supply the corresponding chemical symbol.
+In each game the questions continue to be automatically supplied until the user gives an incorrect answer. At that point their scores (the number of consecutive correct answers) is added to the list of high scores for that game.
+
+## Final Product
+
+!["Screenshot of game screen"](https://github.com/AngusJK/elements/blob/master/docs/elements-gamescreen.png?raw=true)
+
+!["Screenshot of high scores page"](https://github.com/AngusJK/elements/blob/master/docs/elements-highscores.png?raw=true)
+
+!["Screenshot of home page"](https://github.com/AngusJK/elements/blob/master/docs/elements-homepage.png?raw=true) 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -69,10 +85,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Final Product
-
-!["Screenshot of game screen"](https://github.com/AngusJK/elements/blob/master/docs/elements-gamescreen.png?raw=true)
-
-!["Screenshot of high scores page"](https://github.com/AngusJK/elements/blob/master/docs/elements-highscores.png?raw=true)
-
-!["Screenshot of home page"](https://github.com/AngusJK/elements/blob/master/docs/elements-homepage.png?raw=true) 
