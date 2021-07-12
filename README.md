@@ -1,10 +1,10 @@
 ## Overview
 
-This app is designed as a tool to help learn the names, chemical symbols, and atomic numbers of the elements of the periodic table. 
+This app is designed as a tool to help students learn the names, chemical symbols, and atomic numbers of the elements of the periodic table. 
 Game 1 shows the user randomly selected chemical symbols and asks them to supply the corresponding element name.
 Game 2 shows the user randomly selected element names and asks them to supply the corresponding atomic number.
 Game 3 shows the user randomly selected element names and asks them to supply the corresponding chemical symbol.
-In each game the questions continue to be automatically supplied until the user gives an incorrect answer. At that point their scores (the number of consecutive correct answers) is added to the list of high scores for that game.
+In each game the questions continue to be supplied automatically until the user gives an incorrect answer. At that point their score (the number of consecutive correct answers) is added to the list of high scores for that game.
 
 ## Final Product
 
