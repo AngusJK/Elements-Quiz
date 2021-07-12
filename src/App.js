@@ -23,9 +23,9 @@ function App() {
   const [userName, setUserName] = useState('');
   const [gameOver, setGameOver] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
-  const [nameScores, setNameScores] = useState([{ key: 1, name: "George", score: 15 }]);
-  const [numberScores, setNumberScores] = useState([{ key: 1, name: "Marvin", score: 9 }]);
-  const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Barton", score: 13 }]);
+  const [nameScores, setNameScores] = useState([{ key: 1, name: "Marie", score: 15 }, { key: 2, name: "Glenn", score: 9 }, { key: 3, name: "Wilhelm", score: 7 }, { key: 4, name: "Ernest", score: 4 }]);
+  const [numberScores, setNumberScores] = useState([{ key: 1, name: "Albert", score: 9 }, { key: 2, name: "Lise", score: 8 }, { key: 3, name: "Nicolaus", score: 6 }, { key: 4, name: "Enrico", score: 5 }]);
+  const [symbolScores, setSymbolScores] = useState([{ key: 1, name: "Dmitri", score: 13 }, { key: 2, name: "Alfred", score: 10 }, { key: 3, name: "Yuri", score: 9 }, { key: 4, name: "Niels", score: 2 }]);
   useEffect(() => {
     localStorage.setItem('nameScores', JSON.stringify(nameScores));
   }, [nameScores]);
