@@ -80,7 +80,7 @@ if (gameOver) {
   )} else if (gameStarted === false) {
     return(
       <div className="question">
-        <p>In this game you will be given the name of an element from the Periodic Table and you must give it's atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck, {userName}!</p>
+        <p>In this game you will be given the name of an element from the Periodic Table and you must give its atomic number. Questions continue until you get one wrong. Remember to capitalize the first letter! Good luck, {userName}!</p>
         <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
           <button className="btn escape-btn" onClick={reset}>Hell no.</button>
@@ -95,7 +95,13 @@ if (gameOver) {
           <h1>{capitalize(currentElement.name)}</h1>
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
-          <input id="symbol-answer-input"onChange={inputTextHandler} type="text" autoComplete="off" />
+          <input className="answer-input"
+            id="symbol-answer-input"
+            onChange={inputTextHandler} 
+            type="text" 
+            autoComplete="off" 
+            maxLength="2"
+            autoFocus/>
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
