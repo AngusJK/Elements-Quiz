@@ -30,8 +30,8 @@ const Home = function({
   if (userName) {
     return (
       <div className="home-page">
-        <button onClick={logOutUser} className="btn logout">Log Out</button>
-        <h4>Welcome, {userName}. Choose a game to play:</h4>
+        
+        <h4 id="choice">Welcome, {userName}. Choose a game to play:</h4>
         <ul className="nav-links">
           <div className="game">
             <li>Game 1 - guess the element name from the symbol provided</li>
@@ -74,7 +74,8 @@ const Home = function({
               </button>
             </Link>
           </div>
-        </ul> 
+        </ul>
+        <button onClick={logOutUser} className="btn logout">Log Out</button> 
       </div>
     )
   } else {
@@ -82,7 +83,7 @@ const Home = function({
       <div className="sign-in-form">
         <h3 id="enter-name">Please sign in</h3>
         <form action="" onSubmit={createUser} className="username-form">
-          <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name"/>
+          <input onChange={inputTextHandler} type="text" className="name-input" placeholder="name" autoFocus/>
           <div><button className="btn name-submit">SUBMIT</button></div>
         </form>
       </div>
