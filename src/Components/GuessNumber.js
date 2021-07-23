@@ -94,7 +94,12 @@ if (gameOver) { return (
           <h1>{capitalize(currentElement.name)}</h1>
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
-          <input id="number-answer-input" onChange={inputTextHandler} type="text" autoComplete="off" />
+          <input className="answer-input"
+          id="number-answer-input" 
+          onChange={inputTextHandler} 
+          type="text" 
+          autoComplete="off" 
+          autoFocus/>
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
         <Link to="/">
