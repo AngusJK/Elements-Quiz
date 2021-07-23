@@ -27,6 +27,7 @@
   background-color: grey;
   width: 50%;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 10px;
   border-radius: 3px;
 }
@@ -85,7 +86,6 @@
 
 .start-game-btn:hover {
   opacity: 1.0;
-  
 }
 
 .escape-btn {
@@ -135,8 +135,12 @@
   margin: 0 auto;
   padding: 10px;
   border-radius: 3px;
+  text-align: center;
 }
 
+#choice {
+  margin: 30px 0 40px 0;
+}
 
 .question {
   width: 75%;
@@ -157,6 +161,7 @@
   border: 1px solid white;
   margin: 0 auto;
   text-align: center;
+  margin-top: 40px;
 }
 
 .answer-form {
@@ -165,14 +170,17 @@
 }
 
 .answer-input {
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 0;
-  border-radius: 3px;
+  font-size: 30px;
+  color: white;
+  outline: 0;
+  background-color: black;
+  border: none;
+  caret-color: white;
+  text-align: center;
 }
 
 #symbol-answer-input {
-  width: 50px;
+  width: 70px;
 }
 
 #number-answer-input {
