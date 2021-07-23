@@ -92,7 +92,10 @@ const GuessName = function({
         </div>
         
         <form action="" className="answer-form" onSubmit={submitAnswerHandler}>
-          <input className="answer-input" onChange={inputTextHandler} type="text" placeholder="type your answer here" />
+          <input className="answer-input" 
+            onChange={inputTextHandler} 
+            type="text" 
+            autoFocus/>
         </form>
         
         <h4>Correct answers: {questionsAsked}</h4>
