@@ -101,6 +101,7 @@ if (gameOver) {
             type="text" 
             autoComplete="off" 
             maxLength="2"
+            required
             autoFocus/>
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
