@@ -95,10 +95,12 @@ if (gameOver) { return (
         </div>
         <form action="" className="answer" onSubmit={submitAnswerHandler}>
           <input className="answer-input"
-          id="number-answer-input" 
-          onChange={inputTextHandler} 
-          type="text" 
-          autoComplete="off" 
+          id="number-answer-input"
+          onChange={inputTextHandler}
+          type="text"
+          autoComplete="off"
+          maxLength="3"
+          required
           autoFocus/>
         </form>
         <h3>Questions answered: {questionsAsked}</h3>
