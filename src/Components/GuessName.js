@@ -94,7 +94,8 @@ const GuessName = function({
         <form action="" className="answer-form" onSubmit={submitAnswerHandler}>
           <input className="answer-input" 
             onChange={inputTextHandler} 
-            type="text" 
+            type="text"
+            required 
             autoFocus/>
         </form>
         
