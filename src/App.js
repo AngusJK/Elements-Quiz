@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 
@@ -116,6 +117,10 @@ const App = function () {
       </div>
     </Router>
   )
+}
+
+App.propTypes = {
+  inputText: PropTypes.string
 }
 
 export default App
