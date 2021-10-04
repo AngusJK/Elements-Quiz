@@ -7,7 +7,7 @@ const GuessSymbol = function ({
   elements,
   currentElement,
   setCurrentElement,
-  questionsAsked, 
+  questionsAsked,
   setQuestionsAsked,
   correctAnswers,
   setCorrectAnswers,
