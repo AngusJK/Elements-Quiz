@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { compare } from '../Utils';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { compare } from '../Utils'
 
-const SymbolScores = function({ symbolScores }) {
-  const scoresInOrder = symbolScores.sort(compare);
-  let n = 1;
-  for (let score of scoresInOrder) {
-    score.rank = n;
-    n++;
+const SymbolScores = function ({ symbolScores }) {
+  const scoresInOrder = symbolScores.sort(compare)
+  let n = 1
+  for (const score of scoresInOrder) {
+    score.rank = n
+    n++
   }
   return (
     <div id="high-scores">
@@ -35,6 +35,6 @@ const SymbolScores = function({ symbolScores }) {
       </Link>
     </div>
   )
-};
+}
 
-export default SymbolScores;
+export default SymbolScores
