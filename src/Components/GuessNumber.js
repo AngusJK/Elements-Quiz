@@ -82,7 +82,7 @@ const GuessNumber = function ({
   } else if (gameStarted === false) {
     return (
       <div className="question">
-        <p>In this game you will be shown the name of an element and you must type it's Atomic Number. Get as many consecutive answers correct as you can. Good luck, {userName}!</p>
+        <p>In this game you will be shown the name of an element and you must type its Atomic Number. Get as many consecutive answers correct as you can. Good luck, {userName}!</p>
         <div><button className="btn start-game-btn" onClick={startGame}>Start Game</button></div>
         <Link to="/">
           <button className="btn escape-btn">Yikes! Get me out of here!</button>
