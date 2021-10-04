@@ -1,4 +1,6 @@
-const Header = function({ title }) {
+import React from 'react'
+
+const Header = function ({ title }) {
   return (
     <header className="header">
       <h1 id="title">{ title }</h1>
@@ -6,4 +8,4 @@ const Header = function({ title }) {
   )
 }
 
-export default Header;
+export default Header
