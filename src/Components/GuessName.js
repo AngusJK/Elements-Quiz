@@ -1,67 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-const GuessName = function({ 
-    inputText, 
-    setInputText, 
-    elements, 
-    currentElement, 
-    setCurrentElement,
-    questionsAsked, 
-    setQuestionsAsked,
-    correctAnswers,
-    setCorrectAnswers,
-    userName,
-    gameOver,
-    setGameOver,
-    nameScores,
-    setNameScores,
-    gameStarted,
-    setGameStarted
-    }) {
+const GuessName = function ({
+  inputText,
+  setInputText,
+  elements,
+  currentElement,
+  setCurrentElement,
+  questionsAsked,
+  setQuestionsAsked,
+  correctAnswers,
+  setCorrectAnswers,
+  userName,
+  gameOver,
+  setGameOver,
+  nameScores,
+  setNameScores,
+  gameStarted,
+  setGameStarted
+}) {
   const setNewSymbol = () => {
-    let num = Math.floor(Math.random() * 118);
-    setCurrentElement(elements[num]);
-  };
+    const num = Math.floor(Math.random() * 118)
+    setCurrentElement(elements[num])
+  }
   const startGame = () => {
-    setNewSymbol();
-    setGameStarted(true);
+    setNewSymbol()
+    setGameStarted(true)
   }
   const updateNameScores = (name, number) => {
-    const latestScore = { key: nameScores.length + 1, name: name, score: +number };
-    const newScores = [...nameScores];
-    newScores.push(latestScore);
-    setNameScores(newScores);
+    const latestScore = { key: nameScores.length + 1, name: name, score: +number }
+    const newScores = [...nameScores]
+    newScores.push(latestScore)
+    setNameScores(newScores)
   }
   const submitAnswerHandler = (e) => {
-    e.preventDefault();
-    setQuestionsAsked(questionsAsked + 1);
+    e.preventDefault()
+    setQuestionsAsked(questionsAsked + 1)
     if (currentElement.name === inputText) {
-      setCorrectAnswers(correctAnswers + 1);
+      setCorrectAnswers(correctAnswers + 1)
     } else {
-      setGameOver(true);
+      setGameOver(true)
       setGameStarted(false)
-      if(questionsAsked > 0) {updateNameScores(userName, questionsAsked)}
+      if (questionsAsked > 0) { updateNameScores(userName, questionsAsked) }
     }
-    e.target.reset();
-    setNewSymbol();
+    e.target.reset()
+    setNewSymbol()
   }
   const inputTextHandler = (e) => {
-    setInputText(e.target.value.trim().toLowerCase());
+    setInputText(e.target.value.trim().toLowerCase())
   }
   const reset = () => {
-    setQuestionsAsked(0);
-    setCorrectAnswers(0);
-    setCurrentElement('');
-    setGameOver(false);
-    setGameStarted(false);
+    setQuestionsAsked(0)
+    setCorrectAnswers(0)
+    setCurrentElement('')
+    setGameOver(false)
+    setGameStarted(false)
   }
   const replay = () => {
-    setQuestionsAsked(0);
-    setCorrectAnswers(0);
-    setNewSymbol();
-    setGameOver(false);
-    setGameStarted(true);
+    setQuestionsAsked(0)
+    setCorrectAnswers(0)
+    setNewSymbol()
+    setGameOver(false)
+    setGameStarted(true)
   }
   if (gameOver) {
     return (
@@ -74,7 +74,7 @@ const GuessName = function({
         </Link>
       </div>
     )
-  } else if (gameStarted === false){
+  } else if (gameStarted === false) {
     return (
       <div className="question">
         <p>In this game you will be shown a symbol from the Periodic Table and you have to name the element that that symbol designates. The questions continue until you get an answer wrong. Good luck, {userName}! And remember, spelling counts! </p>
@@ -92,10 +92,10 @@ const GuessName = function({
         </div>
         
         <form action="" className="answer-form" onSubmit={submitAnswerHandler}>
-          <input className="answer-input" 
-            onChange={inputTextHandler} 
+          <input className="answer-input"
+            onChange={inputTextHandler}
             type="text"
-            required 
+            required
             autoFocus/>
         </form>
         
@@ -108,4 +108,4 @@ const GuessName = function({
   }
 }
 
-export default GuessName;
+export default GuessName
