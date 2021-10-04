@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { compare } from '../Utils';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { compare } from '../Utils'
 
-const NumberScores = function({ numberScores }) {
-  const scoresInOrder = numberScores.sort(compare);
-  let n = 1;
-  for (let score of scoresInOrder) {
-    score.rank = n;
-    n++;
+const NumberScores = function ({ numberScores }) {
+  const scoresInOrder = numberScores.sort(compare)
+  let n = 1
+  for (const score of scoresInOrder) {
+    score.rank = n
+    n++
   }
   return (
     <div id="high-scores">
@@ -35,6 +35,6 @@ const NumberScores = function({ numberScores }) {
       </Link>
     </div>
   )
-};
+}
 
-export default NumberScores;
+export default NumberScores
