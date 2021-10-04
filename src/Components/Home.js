@@ -1,31 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../App.css'
 
-const Home = function({ 
-    userName, 
-    setUserName, 
-    inputText, 
-    setInputText, 
-    users, 
-    setUsers
-  }) {
+const Home = function ({
+  userName,
+  setUserName,
+  inputText,
+  setInputText,
+  users,
+  setUsers
+}) {
   const handleUsers = (user) => {
-    const newUsers = [...users];
-    newUsers.push(user);
-    setUsers(newUsers);
-  };
+    const newUsers = [...users]
+    newUsers.push(user)
+    setUsers(newUsers)
+  }
   const createUser = (e) => {
-    e.preventDefault();
-    handleUsers(inputText);
-    setUserName(inputText);
-    e.target.reset();
-  };
+    e.preventDefault()
+    handleUsers(inputText)
+    setUserName(inputText)
+    e.target.reset()
+  }
   const inputTextHandler = (e) => {
-    setInputText(e.target.value.trim());
+    setInputText(e.target.value.trim())
   }
   const logOutUser = () => {
-    setUserName('');
+    setUserName('')
   }
   if (userName) {
     return (
@@ -75,7 +75,7 @@ const Home = function({
             </Link>
           </div>
         </ul>
-        <button onClick={logOutUser} className="btn logout">Log Out</button> 
+        <button onClick={logOutUser} className="btn logout">Log Out</button>
       </div>
     )
   } else {
@@ -91,4 +91,4 @@ const Home = function({
   }
 }
 
-export default Home;
+export default Home
