@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import '../App.css'
 
@@ -89,6 +90,15 @@ const Home = function ({
       </div>
     )
   }
+}
+
+Home.propTypes = {
+  userName: PropTypes.string,
+  setUserName: PropTypes.string,
+  inputText: PropTypes.string,
+  setInputText: PropTypes.string,
+  users: PropTypes.array,
+  setUsers: PropTypes.array
 }
 
 export default Home
