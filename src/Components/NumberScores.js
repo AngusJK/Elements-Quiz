@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { compare } from '../Utils'
 
@@ -35,6 +36,10 @@ const NumberScores = function ({ numberScores }) {
       </Link>
     </div>
   )
+}
+
+NumberScores.propTypes = {
+  numberScores: PropTypes.array
 }
 
 export default NumberScores
