@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { compare } from '../Utils'
 
@@ -35,6 +36,10 @@ const SymbolScores = function ({ symbolScores }) {
       </Link>
     </div>
   )
+}
+
+SymbolScores.propTypes = {
+  symbolScores: PropTypes.array
 }
 
 export default SymbolScores
