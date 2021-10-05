@@ -94,11 +94,11 @@ const Home = function ({
 
 Home.propTypes = {
   userName: PropTypes.string,
-  setUserName: PropTypes.string,
+  setUserName: PropTypes.func,
   inputText: PropTypes.string,
-  setInputText: PropTypes.string,
+  setInputText: PropTypes.func,
   users: PropTypes.array,
-  setUsers: PropTypes.array
+  setUsers: PropTypes.func
 }
 
 export default Home
