@@ -117,21 +117,21 @@ const GuessSymbol = function ({
 
 GuessSymbol.propTypes = {
   inputText: PropTypes.string,
-  setInputText: PropTypes.string,
+  setInputText: PropTypes.func,
   elements: PropTypes.array,
-  currentElement: PropTypes.string,
-  setCurrentElement: PropTypes.string,
+  currentElement: PropTypes.any,
+  setCurrentElement: PropTypes.func,
   questionsAsked: PropTypes.number,
-  setQuestionsAsked: PropTypes.number,
+  setQuestionsAsked: PropTypes.func,
   correctAnswers: PropTypes.number,
-  setCorrectAnswers: PropTypes.number,
+  setCorrectAnswers: PropTypes.func,
   userName: PropTypes.string,
   gameOver: PropTypes.bool,
-  setGameOver: PropTypes.bool,
+  setGameOver: PropTypes.func,
   symbolScores: PropTypes.array,
-  setSymbolScores: PropTypes.array,
+  setSymbolScores: PropTypes.func,
   gameStarted: PropTypes.bool,
-  setGameStarted: PropTypes.bool
+  setGameStarted: PropTypes.func
 }
 
 export default GuessSymbol
