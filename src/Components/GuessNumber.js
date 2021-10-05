@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const GuessNumber = function ({
@@ -113,6 +114,25 @@ const GuessNumber = function ({
       </div>
     )
   }
+}
+
+GuessNumber.propTypes = {
+  inputText: PropTypes.string,
+  setInputText: PropTypes.string,
+  elements: PropTypes.array,
+  currentElement: PropTypes.string,
+  setCurrentElement: PropTypes.string,
+  questionsAsked: PropTypes.number,
+  setQuestionsAsked: PropTypes.number,
+  correctAnswers: PropTypes.number,
+  setCorrectAnswers: PropTypes.number,
+  userName: PropTypes.string,
+  gameOver: PropTypes.bool,
+  setGameOver: PropTypes.bool,
+  numberScores: PropTypes.array,
+  setNumberScores: PropTypes.array,
+  gameStarted: PropTypes.bool,
+  setGameStarted: PropTypes.bool
 }
 
 export default GuessNumber
